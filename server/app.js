@@ -17,6 +17,9 @@ app.use(express.json());
 
 // Middleware to parse form data
 app.use(express.urlencoded({ extended: true }));
+app.get("/", (req, res) => {
+  res.send("✅ Backend is live!");
+});
 
 //API Routes
 app.use("/api/auth", userRouter);
